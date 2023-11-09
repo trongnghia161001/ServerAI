@@ -71,11 +71,6 @@ async def receive_data(websocket, path):
 
         await websocket.send(complete_text)
 
-
-
-
-
-
                             
 def process_text(text):
     try:
@@ -107,7 +102,7 @@ def build_complete_text(corrections):
 
         
 if __name__ == '__main__':
-    start_server = websockets.serve(receive_data, "127.0.0.1", 8080)
+    start_server = websockets.serve(receive_data, "18.143.131.82", 8080)
     asyncio.get_event_loop().run_until_complete(start_server)
     asyncio.get_event_loop().run_forever()
 
